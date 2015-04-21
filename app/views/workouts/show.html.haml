@@ -2,3 +2,7 @@
 %h1= @workout.date
 %h1= @workout.mood
 %h1= @workout.length
+
+= link_to "Edit", edit_workout_path(@workout)
+= link_to 'Delete', workout_path(@workout), method: :delete, data: {confirm: 'Are You Sure?'}
+= link_to "Home", root_path
