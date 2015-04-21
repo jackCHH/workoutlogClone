@@ -2,6 +2,14 @@
 %h1= @workout.date
 %h1= @workout.mood
 %h1= @workout.length
+%br/
+
+#exercises
+	%h2 Exercises
+	= render @workout.exercises
+
+	%h4 Add an Exercise
+	= render 'exercises/form'
 
 = link_to "Edit", edit_workout_path(@workout)
 = link_to 'Delete', workout_path(@workout), method: :delete, data: {confirm: 'Are You Sure?'}
